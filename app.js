@@ -1,18 +1,25 @@
 document.documentElement.classList.add("js");
 
 const revealItems = document.querySelectorAll(".reveal");
-const moodCards = document.querySelectorAll(".mood-card");
-const editCards = document.querySelectorAll(".edit-card");
-const collectionCards = document.querySelectorAll(".collection-card");
-const heroBg = document.querySelector(".hero-bg");
-const heroBgFrames = document.querySelectorAll(".hero-bg-frame");
-const heroThumbs = document.querySelectorAll(".hero-thumb");
-const spotlightTitle = document.querySelector("#spotlight-title");
-const spotlightText = document.querySelector("#spotlight-text");
-const spotlightImage = document.querySelector("#spotlight-image");
-const editSpotlightTitle = document.querySelector("#edit-spotlight-title");
-const editSpotlightText = document.querySelector("#edit-spotlight-text");
-const editSpotlightLink = document.querySelector("#edit-spotlight-link");
+const signatureCards = document.querySelectorAll(".signature-card");
+const shopCards = document.querySelectorAll(".shop-card");
+const navToggle = document.querySelector(".nav-toggle");
+const siteHeader = document.querySelector(".site-header");
+const siteNavLinks = document.querySelectorAll(".site-nav a");
+
+const signatureTitle = document.querySelector("#signature-title");
+const signatureCopy = document.querySelector("#signature-copy");
+const signatureColor = document.querySelector("#signature-color");
+const signatureFinish = document.querySelector("#signature-finish");
+const signatureNumber = document.querySelector("#signature-number");
+const signatureImage = document.querySelector("#signature-image");
+
+const shopTitle = document.querySelector("#shop-title");
+const shopName = document.querySelector("#shop-name");
+const shopCopy = document.querySelector("#shop-copy");
+const shopFormats = document.querySelector("#shop-formats");
+const shopCta = document.querySelector("#shop-cta");
+const shopImage = document.querySelector("#shop-image");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -22,67 +29,55 @@ const revealObserver = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.18 }
+  { threshold: 0.16 }
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
 
-function activateMood(card) {
-  moodCards.forEach((item) => item.classList.toggle("is-active", item === card));
-  if (spotlightTitle && spotlightText && spotlightImage) {
-    spotlightTitle.textContent = card.dataset.title;
-    spotlightText.textContent = card.dataset.copy;
-    spotlightImage.src = card.dataset.image;
-    spotlightImage.alt = card.querySelector("h3").textContent;
-  }
-  document.documentElement.style.setProperty("--accent", card.dataset.accent);
+function activateSignature(card) {
+  signatureCards.forEach((item) => item.classList.toggle("is-active", item === card));
+  signatureTitle.textContent = card.dataset.title;
+  signatureCopy.textContent = card.dataset.copy;
+  signatureColor.textContent = card.dataset.color;
+  signatureFinish.textContent = card.dataset.finish;
+  signatureNumber.textContent = card.dataset.number;
+  signatureImage.src = card.dataset.image;
+  signatureImage.alt = `${card.dataset.color} signature shade`;
 }
 
-moodCards.forEach((card) => {
-  card.addEventListener("mouseenter", () => activateMood(card));
-  card.addEventListener("focus", () => activateMood(card));
-  card.addEventListener("click", () => activateMood(card));
-  card.tabIndex = 0;
+signatureCards.forEach((card) => {
+  card.addEventListener("mouseenter", () => activateSignature(card));
+  card.addEventListener("focus", () => activateSignature(card));
+  card.addEventListener("click", () => activateSignature(card));
 });
 
-function activateEdit(card, shouldScroll = false) {
-  const targetId = card.dataset.target;
-  const target = document.querySelector(`#${targetId}`);
-
-  editCards.forEach((item) => item.classList.toggle("is-active", item === card));
-  collectionCards.forEach((item) =>
-    item.classList.toggle("is-featured", item.id === targetId)
-  );
-
-  editSpotlightTitle.textContent = card.dataset.title;
-  editSpotlightText.textContent = card.dataset.copy;
-  editSpotlightLink.href = `#${targetId}`;
-
-  if (shouldScroll && target) {
-    target.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
+function activateShop(card) {
+  shopCards.forEach((item) => item.classList.toggle("is-active", item === card));
+  shopTitle.textContent = card.dataset.title;
+  shopName.textContent = card.dataset.name;
+  shopCopy.textContent = card.dataset.copy;
+  shopFormats.textContent = card.dataset.formats;
+  shopCta.textContent = card.dataset.cta;
+  shopImage.src = card.dataset.image;
+  shopImage.alt = card.dataset.name;
 }
 
-editCards.forEach((card) => {
-  card.addEventListener("mouseenter", () => activateEdit(card));
-  card.addEventListener("focus", () => activateEdit(card));
-  card.addEventListener("click", () => activateEdit(card, true));
+shopCards.forEach((card) => {
+  card.addEventListener("mouseenter", () => activateShop(card));
+  card.addEventListener("focus", () => activateShop(card));
+  card.addEventListener("click", () => activateShop(card));
 });
 
-function activateHeroFrame(button) {
-  if (!heroBg) return;
+if (navToggle && siteHeader) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-  const targetFrame = button.dataset.frame;
-  heroBg.classList.add("is-manual");
-
-  heroThumbs.forEach((item) => item.classList.toggle("is-active", item === button));
-  heroBgFrames.forEach((frame) =>
-    frame.classList.toggle("is-selected", frame.classList.contains(targetFrame))
-  );
+  siteNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      siteHeader.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 }
-
-heroThumbs.forEach((button) => {
-  button.addEventListener("mouseenter", () => activateHeroFrame(button));
-  button.addEventListener("focus", () => activateHeroFrame(button));
-  button.addEventListener("click", () => activateHeroFrame(button));
-});

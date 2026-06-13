@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NIKO | Color, Distilled.</title>
+    <title>NIKO | Wear your signature.</title>
     <meta
       name="description"
-      content="NIKO is a refined nail color house where modern salon performance meets disciplined design, polished detail, and color with presence."
+      content="NIKO celebrates women whose hands never stop with signature shades matched in gel and dip so their color never drifts."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -19,388 +19,311 @@
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <div class="brand-mark">
-          <span class="brand-monogram">NK</span>
+        <a class="brand-mark" href="#top" aria-label="NIKO home">
           <span class="brand-name">NIKO</span>
-        </div>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="#story">Story</a>
-          <a href="#palette">Palette</a>
-          <a href="#edit">Start Here</a>
-          <a href="#collections">Collections</a>
-          <a href="#systems">Systems</a>
-          <a href="#signature">Details</a>
+          <span class="brand-line">Wear your signature.</span>
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle navigation"
+        >
+          Menu
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="#belief">Belief</a>
+          <a href="#signatures">Signatures</a>
+          <a href="#proof">Proof</a>
+          <a href="#shop">Find yours</a>
         </nav>
       </header>
 
       <main>
         <section class="hero" id="top">
-          <div class="hero-stage reveal">
-            <div class="hero-bg" aria-hidden="true">
-              <img class="hero-bg-frame frame-1" src="./nude.jpeg" alt="" />
-              <img class="hero-bg-frame frame-2" src="./yellow.jpeg" alt="" />
-              <img class="hero-bg-frame frame-3" src="./red.jpeg" alt="" />
-              <img class="hero-bg-frame frame-4" src="./mint.jpeg" alt="" />
+          <div class="hero-copy reveal">
+            <p class="eyebrow">NIKO signature system</p>
+            <h1>Wear your signature.</h1>
+            <p class="hero-subtitle">Made for hands that don't stop.</p>
+            <p class="hero-body">
+              A signature shade in gel and dip, matched to one pigment so it never drifts.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#shop">Find your signature</a>
+              <a class="button button-secondary" href="#proof">See why it holds</a>
             </div>
-            <div class="hero-shade"></div>
-            <div class="hero-copy">
-              <p class="eyebrow">Color, distilled</p>
-              <h1>A more exact kind of color.</h1>
-              <p class="hero-body">Matte form. Polished gold. Controlled shine.</p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="#palette">Discover the palette</a>
-                <a class="button button-secondary" href="#edit">Shop the edit</a>
-              </div>
-              <div class="hero-proof">
-                <div>
-                  <strong>14-day wear</strong>
-                  <span>Long-wear shine.</span>
-                </div>
-                <div>
-                  <strong>Pro-level payoff</strong>
-                  <span>Dense pigment. Smooth laydown.</span>
-                </div>
-              </div>
-            </div>
-            <div class="hero-rail">
-              <div class="hero-thumbs" aria-label="Hero story frames">
-                <button class="hero-thumb is-active" type="button" data-frame="frame-1">
-                  <img src="./nude.jpeg" alt="Quiet luxury hero frame" />
-                  <span>Quiet luxury</span>
-                </button>
-                <button class="hero-thumb" type="button" data-frame="frame-2">
-                  <img src="./yellow.jpeg" alt="Soft light hero frame" />
-                  <span>Soft light</span>
-                </button>
-                <button class="hero-thumb" type="button" data-frame="frame-3">
-                  <img src="./red.jpeg" alt="Impact hero frame" />
-                  <span>Impact</span>
-                </button>
-                <button class="hero-thumb" type="button" data-frame="frame-4">
-                  <img src="./mint.jpeg" alt="Freshness hero frame" />
-                  <span>Freshness</span>
-                </button>
-              </div>
-              <a class="hero-scroll" href="#story">Scroll the story</a>
+          </div>
+
+          <div class="hero-visual reveal" aria-label="NIKO campaign direction">
+            <figure class="hero-frame hero-frame-primary">
+              <img src="./nude.jpeg" alt="NIKO neutral signature shade" />
+            </figure>
+            <figure class="hero-frame hero-frame-secondary">
+              <img src="./red.jpeg" alt="NIKO bold signature shade" />
+            </figure>
+            <figure class="hero-frame hero-frame-detail">
+              <img src="./yellow.jpeg" alt="NIKO polished finish detail" />
+            </figure>
+            <div class="hero-note">
+              <span>Campaign direction</span>
+              <p>Replace with real working-hands photography as soon as the shoot is ready.</p>
             </div>
           </div>
         </section>
 
-        <section class="marquee-band reveal" aria-label="Brand cues">
-          <div class="marquee-track">
-            <span>Color, distilled</span>
-            <span>Quiet confidence</span>
-            <span>Polished detail</span>
-            <span>Salon performance</span>
-            <span>Color, distilled</span>
-            <span>Quiet confidence</span>
-            <span>Polished detail</span>
+        <section class="belief reveal" id="belief">
+          <div class="section-label">Belief</div>
+          <div class="belief-grid">
+            <h2>First prove you understand her. Then earn the sale.</h2>
+            <div class="belief-copy">
+              <p>Made for hands that work, build, carry, hold everything together.</p>
+              <p>
+                The woman is the hero. The number is the quiet mechanism that proves her
+                signature holds.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section class="story-film reveal" id="story">
-          <div class="section-heading">
-            <div class="section-kicker">The house</div>
-            <h2>Let the product do the talking.</h2>
-          </div>
-          <div class="film-grid">
-            <figure class="film-frame film-frame-tall">
-              <img src="./nude.jpeg" alt="NIKO nude bottle" />
-              <figcaption>Quiet luxury</figcaption>
-            </figure>
-            <figure class="film-frame">
-              <img src="./yellow.jpeg" alt="NIKO bottle detail in warm yellow" />
-              <figcaption>Soft light</figcaption>
-            </figure>
-            <figure class="film-frame">
-              <img src="./taupe.jpeg" alt="NIKO taupe bottle" />
-              <figcaption>Editorial calm</figcaption>
-            </figure>
-            <figure class="film-quote">
-              <p>Precision is the new luxury.</p>
-            </figure>
-          </div>
-        </section>
-
-        <section class="palette" id="palette">
+        <section class="signatures" id="signatures">
           <div class="section-heading reveal">
-            <div class="section-kicker">The palette</div>
-            <h2>Every shade enters with composure.</h2>
-            <p>Soft neutrals, lifted pastels, one decisive note of heat.</p>
+            <div class="section-label">The signatures</div>
+            <h2>Every shade should feel like a person, not a SKU.</h2>
           </div>
 
-          <div class="palette-grid">
-            <article
-              class="mood-card reveal is-active"
-              data-title="Quiet luxury"
-              data-copy="Warm neutrals, polished gold, and disciplined negative space."
+          <div class="signature-grid">
+            <button
+              class="signature-card reveal is-active"
+              type="button"
+              data-title="The closer"
+              data-copy="Shows up prepared. Moves fast. Wants a neutral that looks expensive without asking for attention."
+              data-finish="Gel + dip"
+              data-number="Nº 014"
+              data-color="Quiet nude"
               data-image="./nude.jpeg"
-              data-accent="#ead4bc"
+              style="--card-tone:#d8c2aa"
             >
-              <img src="./nude.jpeg" alt="NIKO nude bottle" />
-              <span class="swatch" style="--swatch:#ead4bc"></span>
-              <h3>Nude restraint</h3>
-              <p>Soft and self-possessed.</p>
-            </article>
+              <span class="signature-number">Nº 014</span>
+              <strong>The closer</strong>
+              <small>Quiet nude</small>
+            </button>
 
-            <article
-              class="mood-card reveal"
-              data-title="Modern femininity"
-              data-copy="A lilac moment that feels contemporary rather than sweet."
-              data-image="./lilac.jpeg"
-              data-accent="#cfc7dc"
-            >
-              <img src="./lilac.jpeg" alt="NIKO lilac bottle" />
-              <span class="swatch" style="--swatch:#cfc7dc"></span>
-              <h3>Lilac clarity</h3>
-              <p>Clean, lifted, assured.</p>
-            </article>
-
-            <article
-              class="mood-card reveal"
-              data-title="Fresh precision"
-              data-copy="Mint adds brightness without becoming loud or juvenile."
-              data-image="./mint.jpeg"
-              data-accent="#bfdcd0"
-            >
-              <img src="./mint.jpeg" alt="NIKO mint bottle" />
-              <span class="swatch" style="--swatch:#bfdcd0"></span>
-              <h3>Mint freshness</h3>
-              <p>Crisp, bright, restrained.</p>
-            </article>
-
-            <article
-              class="mood-card reveal"
-              data-title="Optimistic polish"
-              data-copy="Butter yellow gives the brand warmth, optimism, and glow."
+            <button
+              class="signature-card reveal"
+              type="button"
+              data-title="The one who shows up"
+              data-copy="Warm, steady, impossible to miss. Brings softness without ever reading fragile."
+              data-finish="Gel + dip"
+              data-number="Nº 031"
+              data-color="Butter light"
               data-image="./butter.jpeg"
-              data-accent="#f4e89c"
+              style="--card-tone:#eadf96"
             >
-              <img src="./butter.jpeg" alt="NIKO butter bottle" />
-              <span class="swatch" style="--swatch:#f4e89c"></span>
-              <h3>Butter light</h3>
-              <p>Warmth without nostalgia.</p>
-            </article>
+              <span class="signature-number">Nº 031</span>
+              <strong>The one who shows up</strong>
+              <small>Butter light</small>
+            </button>
 
-            <article
-              class="mood-card reveal"
-              data-title="Confident impact"
-              data-copy="The red bottle carries authority and gives the system its pulse."
+            <button
+              class="signature-card reveal"
+              type="button"
+              data-title="The quiet force"
+              data-copy="Doesn't need loudness to land. Holds the room with control, polish, and zero drift."
+              data-finish="Gel + dip"
+              data-number="Nº 052"
+              data-color="Mint clarity"
+              data-image="./mint.jpeg"
+              style="--card-tone:#bbd7cb"
+            >
+              <span class="signature-number">Nº 052</span>
+              <strong>The quiet force</strong>
+              <small>Mint clarity</small>
+            </button>
+
+            <button
+              class="signature-card reveal"
+              type="button"
+              data-title="The finisher"
+              data-copy="For women who want their signature to land once and stay true from first meeting to final text."
+              data-finish="Gel + dip"
+              data-number="Nº 077"
+              data-color="Confident red"
               data-image="./red.jpeg"
-              data-accent="#a74149"
+              style="--card-tone:#9e434b"
             >
-              <img src="./red.jpeg" alt="NIKO red bottle" />
-              <span class="swatch" style="--swatch:#a74149"></span>
-              <h3>Confident red</h3>
-              <p>Rich, exact, unforgettable.</p>
-            </article>
+              <span class="signature-number">Nº 077</span>
+              <strong>The finisher</strong>
+              <small>Confident red</small>
+            </button>
+          </div>
 
-            <article
-              class="mood-card reveal"
-              data-title="Professional calm"
-              data-copy="Taupe keeps the story grounded in salon credibility and balance."
-              data-image="./taupe.jpeg"
-              data-accent="#baa697"
-            >
-              <img src="./taupe.jpeg" alt="NIKO taupe bottle" />
-              <span class="swatch" style="--swatch:#baa697"></span>
-              <h3>Taupe balance</h3>
-              <p>Neutral authority.</p>
-            </article>
+          <div class="signature-spotlight reveal">
+            <div class="spotlight-copy">
+              <div class="section-label">Selected signature</div>
+              <h3 id="signature-title">The closer</h3>
+              <p id="signature-copy">
+                Shows up prepared. Moves fast. Wants a neutral that looks expensive without asking
+                for attention.
+              </p>
+              <dl class="spotlight-meta">
+                <div>
+                  <dt>Shade</dt>
+                  <dd id="signature-color">Quiet nude</dd>
+                </div>
+                <div>
+                  <dt>System</dt>
+                  <dd id="signature-finish">Gel + dip</dd>
+                </div>
+                <div>
+                  <dt>Code</dt>
+                  <dd id="signature-number">Nº 014</dd>
+                </div>
+              </dl>
+            </div>
+            <figure class="spotlight-visual">
+              <img id="signature-image" src="./nude.jpeg" alt="Quiet nude signature shade" />
+            </figure>
           </div>
         </section>
 
-        <section class="start-here reveal" id="edit" aria-labelledby="edit-title">
-          <div class="section-heading">
-            <div class="section-kicker">Start here</div>
-            <h2 id="edit-title">Choose your entry point.</h2>
-            <p>Three moods. One clear path.</p>
-          </div>
-
-          <div class="edit-grid">
-            <button
-              class="edit-card is-active"
-              type="button"
-              data-target="collection-core"
-              data-title="The composed core"
-              data-copy="For clients who want polished, flattering, everyday color with immediate repeat-wear appeal."
-            >
-              <span class="edit-label">Start with</span>
-              <img src="./nude.jpeg" alt="Everyday NIKO neutral shades" />
-              <strong>Everyday icons</strong>
-              <p>Soft neutrals.</p>
-            </button>
-            <button
-              class="edit-card"
-              type="button"
-              data-target="collection-lifted"
-              data-title="Brightness with control"
-              data-copy="For clients who want a fresher, fashion-aware note without losing polish or restraint."
-            >
-              <span class="edit-label">Then explore</span>
-              <img src="./mint.jpeg" alt="Fashion-forward NIKO mint shade" />
-              <strong>Fashion tones</strong>
-              <p>Lifted color.</p>
-            </button>
-            <button
-              class="edit-card"
-              type="button"
-              data-target="collection-heat"
-              data-title="Confidence, never excess"
-              data-copy="For clients who want a signature shade with authority, heat, and high repeat appeal."
-            >
-              <span class="edit-label">Finish with</span>
-              <img src="./red.jpeg" alt="Statement NIKO red shade" />
-              <strong>Statement color</strong>
-              <p>One decisive note.</p>
-            </button>
-          </div>
-
-          <div class="edit-spotlight">
-            <p class="spotlight-label">Recommended path</p>
-            <h3 id="edit-spotlight-title">The composed core</h3>
-            <p id="edit-spotlight-text">
-              For clients who want polished, flattering, everyday color with immediate repeat-wear appeal.
-            </p>
-            <a class="button button-primary" id="edit-spotlight-link" href="#collection-core">View this collection</a>
-          </div>
-        </section>
-
-        <section class="collections" id="collections">
+        <section class="proof" id="proof">
           <div class="section-heading reveal">
-            <div class="section-kicker">The edit</div>
-            <h2>Curated like a wardrobe. Built like a system.</h2>
-            <p>Edited, not endless.</p>
+            <div class="section-label">Proof</div>
+            <h2>The emotion is the signature. The mechanism is why it holds.</h2>
           </div>
 
-          <div class="collection-grid">
-            <article class="collection-card reveal collection-card-large is-featured" id="collection-core">
-              <div class="collection-copy">
-                <p class="collection-label">Foundation shades</p>
-                <h3>The composed core</h3>
-                <p>Polished, flattering, repeat-ready.</p>
-              </div>
-              <div class="collection-meta">
-                <span>Best for everyday polish</span>
-                <span>Salon staple</span>
-              </div>
-              <div class="collection-stack">
-                <img src="./nude.jpeg" alt="NIKO nude bottle" />
-                <img src="./taupe.jpeg" alt="NIKO taupe bottle" />
-                <img src="./butter.jpeg" alt="NIKO butter bottle" />
-              </div>
+          <div class="proof-band reveal">
+            <article class="proof-stat">
+              <span class="proof-index">01</span>
+              <h3>Two-week wear</h3>
+              <p>Performance she can forget about because it simply keeps up.</p>
             </article>
+            <article class="proof-stat">
+              <span class="proof-index">02</span>
+              <h3>150+ shades</h3>
+              <p>Enough range to find hers without flattening every shade into the same story.</p>
+            </article>
+            <article class="proof-stat">
+              <span class="proof-index">03</span>
+              <h3>Gel and dip matched to one pigment</h3>
+              <p>The number steps forward here, proves the match, then gets out of the way.</p>
+            </article>
+          </div>
 
-            <article class="collection-card reveal" id="collection-lifted">
-              <div class="collection-copy">
-                <p class="collection-label">Lifted tones</p>
-                <h3>Brightness with control</h3>
-                <p>Fresh, fashion-aware, controlled.</p>
-              </div>
-              <div class="collection-meta">
-                <span>Editorial color story</span>
-                <span>Modern signature</span>
-              </div>
-              <img src="./mint.jpeg" alt="NIKO mint bottle" />
-            </article>
-
-            <article class="collection-card reveal" id="collection-heat">
-              <div class="collection-copy">
-                <p class="collection-label">Signature heat</p>
-                <h3>Confidence, never excess</h3>
-                <p>Statement shade. No noise.</p>
-              </div>
-              <div class="collection-meta">
-                <span>Statement shade</span>
-                <span>High repeat appeal</span>
-              </div>
-              <img src="./red.jpeg" alt="NIKO red bottle" />
-            </article>
+          <div class="proof-visual reveal">
+            <figure class="proof-image">
+              <img src="./taupe.jpeg" alt="NIKO taupe signature detail" />
+            </figure>
+            <div class="proof-callout">
+              <span class="proof-callout-label">Nº is the mechanism</span>
+              <p>
+                Identity belongs to the woman. The number only exists to guarantee her signature
+                stays exact when she reorders in a different format.
+              </p>
+            </div>
           </div>
         </section>
 
-        <section class="proof reveal" aria-labelledby="proof-title">
+        <section class="credibility reveal" id="credibility">
           <div class="section-heading">
-            <div class="section-kicker">Why it wins</div>
-            <h2 id="proof-title">The luxury is emotional. The reason to reorder is performance.</h2>
-            <p>Desire first. Results second.</p>
+            <div class="section-label">Social proof</div>
+            <h2>Leave space for the proof that matters most.</h2>
           </div>
 
-          <div class="proof-grid">
-            <article>
-              <img src="./yellow.jpeg" alt="NIKO finish detail" />
-              <span>01</span>
-              <h3>Even, dense pigment</h3>
-              <p>True color.</p>
+          <div class="credibility-grid">
+            <article class="placeholder-card">
+              <span>Technician quote</span>
+              <p>Reserved for a real working tech who uses NIKO and can't afford to be wrong.</p>
             </article>
-            <article>
-              <img src="./nude.jpeg" alt="NIKO shine and finish detail" />
-              <span>02</span>
-              <h3>Gloss that holds</h3>
-              <p>Lasting shine.</p>
-            </article>
-            <article>
-              <img src="./red.jpeg" alt="NIKO signature red hero image" />
-              <span>03</span>
-              <h3>Made for repeat use</h3>
-              <p>Built to reorder.</p>
+            <article class="placeholder-card">
+              <span>Salon count</span>
+              <p>Reserved for the real stocked-in figure once it is verified and worth saying.</p>
             </article>
           </div>
         </section>
 
-        <section class="story-strip reveal" id="systems">
-          <div class="section-heading">
-            <div class="section-kicker">The wear story</div>
-            <h2>Let texture, shine, and shape carry the experience.</h2>
+        <section class="shop" id="shop">
+          <div class="section-heading reveal">
+            <div class="section-label">Find your signature</div>
+            <h2>Discovery first. No wall of 150 choices on day one.</h2>
           </div>
-          <div class="strip-grid">
-            <figure class="strip-frame">
-              <img src="./yellow.jpeg" alt="NIKO texture and shine detail" />
-              <figcaption>Texture</figcaption>
-            </figure>
-            <figure class="strip-frame">
-              <img src="./mint.jpeg" alt="NIKO modern mint tone" />
-              <figcaption>Freshness</figcaption>
-            </figure>
-            <figure class="strip-frame">
-              <img src="./red.jpeg" alt="NIKO signature red shade" />
-              <figcaption>Impact</figcaption>
-            </figure>
-          </div>
-        </section>
 
-        <section class="signature" id="signature">
-          <div class="signature-image reveal">
-            <img src="./yellow.jpeg" alt="NIKO yellow polish bottle close-up" />
-          </div>
-          <div class="signature-copy reveal">
-            <div class="section-kicker">Signature details</div>
-            <h2>Gold hardware, matte silhouettes, and generous air do the seduction quietly.</h2>
-            <p>
-              Soft light. Elegant crops. Deliberate air.
-            </p>
+          <div class="shop-grid">
+            <div class="shop-list">
+              <button
+                class="shop-card reveal is-active"
+                type="button"
+                data-title="Most reordered"
+                data-name="Nº 014 Quiet nude"
+                data-copy="The clean entry point for women who want polish without noise."
+                data-formats="Available in gel and dip"
+                data-cta="Ask your salon or distributor for Nº 014"
+                data-image="./nude.jpeg"
+              >
+                <span class="shop-tag">Most reordered</span>
+                <strong>Nº 014 Quiet nude</strong>
+                <small>Start here</small>
+              </button>
+
+              <button
+                class="shop-card reveal"
+                type="button"
+                data-title="Bestseller"
+                data-name="Nº 077 Confident red"
+                data-copy="The decisive shade for women who want their signature to land immediately."
+                data-formats="Available in gel and dip"
+                data-cta="Ask your salon or distributor for Nº 077"
+                data-image="./red.jpeg"
+              >
+                <span class="shop-tag">Bestseller</span>
+                <strong>Nº 077 Confident red</strong>
+                <small>Statement signature</small>
+              </button>
+
+              <button
+                class="shop-card reveal"
+                type="button"
+                data-title="Fresh signature"
+                data-name="Nº 052 Mint clarity"
+                data-copy="For women who want a modern note without giving up control."
+                data-formats="Available in gel and dip"
+                data-cta="Ask your salon or distributor for Nº 052"
+                data-image="./mint.jpeg"
+              >
+                <span class="shop-tag">Fresh signature</span>
+                <strong>Nº 052 Mint clarity</strong>
+                <small>Modern lift</small>
+              </button>
+            </div>
+
+            <article class="shop-detail reveal">
+              <figure class="shop-detail-image">
+                <img id="shop-image" src="./nude.jpeg" alt="NIKO quiet nude shade" />
+              </figure>
+              <div class="shop-detail-copy">
+                <div class="section-label" id="shop-title">Most reordered</div>
+                <h3 id="shop-name">Nº 014 Quiet nude</h3>
+                <p id="shop-copy">
+                  The clean entry point for women who want polish without noise.
+                </p>
+                <p class="shop-formats" id="shop-formats">Available in gel and dip</p>
+                <a class="button button-primary" id="shop-cta" href="#top">
+                  Ask your salon or distributor for Nº 014
+                </a>
+              </div>
+            </article>
           </div>
         </section>
 
         <section class="closing reveal">
           <div class="closing-panel">
-            <div>
-              <p class="section-kicker">Final impression</p>
-              <h2>A brand for people who notice everything.</h2>
-            </div>
-            <p>Less copy. More atmosphere. More product.</p>
-            <div class="closing-actions">
-              <a class="button button-primary" href="#collections">Shop signature shades</a>
-              <a class="button button-secondary" href="#systems">See performance cues</a>
-            </div>
+            <p class="section-label">Closing line</p>
+            <h2>Wear your signature.</h2>
+            <a class="button button-primary" href="#shop">Find your signature</a>
           </div>
         </section>
       </main>
-
-      <footer class="site-footer">
-        <p>NIKO</p>
-        <p>Color, distilled.</p>
-      </footer>
     </div>
 
     <script src="./app.js"></script>
