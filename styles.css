@@ -1,14 +1,13 @@
 :root {
-  --bg: #f4f0ea;
-  --paper: #fbf8f3;
+  --bg: #f2ece3;
+  --paper: #f9f5ef;
   --panel: rgba(255, 255, 255, 0.74);
-  --panel-strong: rgba(255, 255, 255, 0.92);
-  --ink: #171311;
-  --muted: #655c56;
-  --line: rgba(23, 19, 17, 0.1);
-  --shadow: 0 24px 70px rgba(58, 43, 34, 0.12);
-  --accent: #a74149;
-  --accent-soft: rgba(167, 65, 73, 0.14);
+  --panel-strong: rgba(255, 255, 255, 0.9);
+  --ink: #16110f;
+  --muted: #685f58;
+  --line: rgba(22, 17, 15, 0.1);
+  --accent: #9e434b;
+  --shadow: 0 28px 80px rgba(62, 45, 35, 0.12);
 }
 
 * {
@@ -25,8 +24,9 @@ body {
   color: var(--ink);
   font-family: "Instrument Sans", sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.88), transparent 30%),
-    linear-gradient(180deg, #fffdfa 0%, #f5f0e8 36%, #f0e8de 100%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.94), transparent 28%),
+    radial-gradient(circle at 80% 10%, rgba(158, 67, 75, 0.12), transparent 22%),
+    linear-gradient(180deg, #fffdfa 0%, #f5efe7 38%, #eee5d9 100%);
 }
 
 img {
@@ -40,36 +40,38 @@ a {
 }
 
 .page-shell {
-  padding: 16px 16px 48px;
+  padding: 16px 16px 52px;
 }
 
 .site-header,
 .hero,
 .belief,
+.rhythm,
 .signatures,
 .proof,
 .credibility,
+.ritual,
 .shop,
 .closing {
-  width: min(1220px, 100%);
+  width: min(1260px, 100%);
   margin: 0 auto;
 }
 
 .site-header {
   position: sticky;
   top: 12px;
-  z-index: 30;
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 18px;
   margin-bottom: 18px;
   padding: 14px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.66);
   border-radius: 999px;
-  background: rgba(255, 252, 247, 0.84);
-  backdrop-filter: blur(16px);
-  box-shadow: 0 10px 30px rgba(38, 28, 20, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.68);
+  background: rgba(255, 251, 246, 0.82);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 14px 30px rgba(39, 27, 21, 0.08);
 }
 
 .brand-mark {
@@ -81,13 +83,15 @@ a {
 }
 
 .brand-name,
+.brand-line,
 .eyebrow,
 .section-label,
+.aside-label,
 .proof-index,
-.signature-number,
 .shop-tag,
-.hero-note span,
-.brand-line,
+.signature-number,
+.hero-caption span,
+.ritual-step span,
 .shop-card small {
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -95,7 +99,7 @@ a {
 
 .brand-name {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   line-height: 1;
 }
 
@@ -130,85 +134,88 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
-  gap: 28px;
-  min-height: calc(100vh - 110px);
+  grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.08fr) minmax(250px, 0.48fr);
+  gap: 24px;
   align-items: stretch;
 }
 
-.hero-copy,
-.hero-visual,
+.hero-intro,
+.hero-stage,
+.hero-aside,
 .signature-spotlight,
 .proof-band,
 .proof-visual,
+.placeholder-card,
 .shop-detail,
 .closing-panel,
-.placeholder-card {
-  border: 1px solid rgba(255, 255, 255, 0.7);
+.ritual-step {
+  border: 1px solid rgba(255, 255, 255, 0.66);
   background: var(--panel);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   box-shadow: var(--shadow);
 }
 
-.hero-copy {
+.hero-intro {
   display: grid;
   align-content: end;
   gap: 18px;
-  min-height: 720px;
-  padding: clamp(28px, 5vw, 54px);
-  border-radius: 40px;
+  min-height: 780px;
+  padding: clamp(24px, 4vw, 46px);
+  border-radius: 34px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.34) 0%, rgba(255, 255, 255, 0.9) 76%),
-    linear-gradient(135deg, rgba(167, 65, 73, 0.14), transparent 52%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.92) 78%),
+    linear-gradient(145deg, rgba(158, 67, 75, 0.14), transparent 54%);
+}
+
+.hero-intro h1,
+.belief h2,
+.section-heading h2,
+.rhythm h2,
+.signature-spotlight h3,
+.shop-detail h3,
+.closing h2 {
+  margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 0.92;
+  letter-spacing: 0.02em;
+}
+
+.hero-intro h1 {
+  font-size: clamp(4.4rem, 9vw, 8.6rem);
+  max-width: 6ch;
 }
 
 .eyebrow,
 .section-label,
-.shop-tag {
+.shop-tag,
+.aside-label {
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--muted);
 }
 
-.hero-copy h1,
-.belief h2,
-.section-heading h2,
-.closing h2,
-.shop-detail h3,
-.signature-spotlight h3 {
-  margin: 0;
-  font-family: "Bebas Neue", sans-serif;
-  letter-spacing: 0.02em;
-  line-height: 0.92;
-}
-
-.hero-copy h1 {
-  font-size: clamp(4.6rem, 10vw, 8.8rem);
-  max-width: 6ch;
-}
-
 .hero-subtitle {
   margin: 0;
-  font-size: clamp(1.3rem, 2.1vw, 1.7rem);
+  font-size: clamp(1.28rem, 2vw, 1.72rem);
   font-weight: 600;
 }
 
 .hero-body,
 .belief-copy p,
+.rhythm-copy p,
 .section-heading p,
 .spotlight-copy p,
 .proof-stat p,
 .proof-callout p,
 .placeholder-card p,
-.shop-detail p {
+.ritual-step p,
+.shop-detail p,
+.closing-panel p,
+.hero-aside-block p,
+.hero-caption p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.65;
-}
-
-.hero-body {
-  max-width: 30rem;
-  font-size: 1.02rem;
+  line-height: 1.66;
 }
 
 .hero-actions {
@@ -242,82 +249,104 @@ a {
 .button-secondary {
   color: var(--ink);
   border-color: var(--line);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.58);
 }
 
-.hero-visual {
+.hero-stage {
   position: relative;
-  min-height: 720px;
-  padding: clamp(22px, 3vw, 28px);
+  min-height: 780px;
+  padding: 20px;
   border-radius: 40px;
+  overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08)),
-    linear-gradient(135deg, rgba(167, 65, 73, 0.22), rgba(29, 21, 18, 0.08));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.04)),
+    linear-gradient(135deg, rgba(158, 67, 75, 0.2), rgba(25, 20, 18, 0.06));
+}
+
+.hero-poster,
+.spotlight-visual,
+.proof-image,
+.shop-detail-image,
+.rhythm-card {
   overflow: hidden;
 }
 
-.hero-frame {
+.hero-poster {
   position: absolute;
-  overflow: hidden;
   border-radius: 30px;
 }
 
-.hero-frame img,
+.hero-poster img,
 .spotlight-visual img,
 .proof-image img,
-.shop-detail-image img {
+.shop-detail-image img,
+.rhythm-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.hero-frame-primary {
-  inset: 28px 120px 150px 28px;
+.hero-poster-main {
+  inset: 18px 138px 18px 18px;
 }
 
-.hero-frame-secondary {
-  right: 28px;
-  bottom: 28px;
-  width: 210px;
-  height: 250px;
+.hero-poster-top {
+  top: 18px;
+  right: 18px;
+  width: 220px;
+  height: 246px;
 }
 
-.hero-frame-detail {
-  top: 28px;
-  right: 28px;
-  width: 180px;
-  height: 210px;
+.hero-poster-bottom {
+  right: 18px;
+  bottom: 146px;
+  width: 220px;
+  height: 286px;
 }
 
-.hero-note {
+.hero-caption {
   position: absolute;
-  left: 28px;
-  right: 28px;
-  bottom: 28px;
+  right: 18px;
+  bottom: 18px;
+  width: 220px;
   display: grid;
-  gap: 8px;
-  max-width: 260px;
-  padding: 16px 18px;
-  border-radius: 22px;
-  color: #fff8f2;
-  background: rgba(18, 14, 12, 0.62);
+  gap: 10px;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(18, 14, 12, 0.66);
+  color: #fff8f1;
 }
 
-.hero-note span {
-  font-size: 0.7rem;
+.hero-caption span,
+.ritual-step span {
+  font-size: 0.72rem;
   font-weight: 700;
 }
 
-.hero-note p {
-  margin: 0;
-  line-height: 1.5;
-  font-size: 0.92rem;
+.hero-aside {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  min-height: 780px;
+  padding: 18px;
+  border-radius: 30px;
+}
+
+.hero-aside-block {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(22, 17, 15, 0.08);
 }
 
 .belief,
+.rhythm,
 .signatures,
 .proof,
 .credibility,
+.ritual,
 .shop,
 .closing {
   padding-top: 96px;
@@ -325,7 +354,9 @@ a {
 
 .belief-grid,
 .proof-visual,
-.shop-grid {
+.shop-grid,
+.signature-spotlight,
+.rhythm {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
@@ -333,21 +364,46 @@ a {
 
 .belief h2,
 .section-heading h2,
+.rhythm h2,
 .closing h2 {
-  font-size: clamp(3rem, 7vw, 5.6rem);
+  font-size: clamp(3rem, 6vw, 5.8rem);
 }
 
-.belief-copy {
+.belief-copy,
+.rhythm-copy,
+.spotlight-copy,
+.shop-detail-copy {
   display: grid;
-  gap: 18px;
+  gap: 16px;
   align-content: end;
+}
+
+.rhythm {
+  align-items: stretch;
+}
+
+.rhythm-strip {
+  display: grid;
+  grid-template-columns: 1.15fr 0.9fr 0.95fr;
+  gap: 16px;
+}
+
+.rhythm-card {
+  min-height: 400px;
+  margin: 0;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.rhythm-card:nth-child(2) {
+  transform: translateY(48px);
 }
 
 .section-heading {
   display: grid;
   gap: 10px;
-  margin-bottom: 28px;
-  max-width: 56rem;
+  margin-bottom: 30px;
+  max-width: 58rem;
 }
 
 .signature-grid {
@@ -361,18 +417,18 @@ a {
 .shop-card {
   appearance: none;
   width: 100%;
+  color: var(--ink);
   text-align: left;
+  cursor: pointer;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.64);
-  color: var(--ink);
-  cursor: pointer;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .signature-card {
   display: grid;
-  gap: 34px;
-  min-height: 280px;
+  gap: 28px;
+  min-height: 300px;
   padding: 22px;
   border-radius: 28px;
   background:
@@ -380,16 +436,19 @@ a {
 }
 
 .signature-card strong,
-.shop-card strong {
+.shop-card strong,
+.ritual-step h3,
+.proof-stat h3 {
   display: block;
-  font-size: 1.25rem;
-  line-height: 1.1;
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 1.08;
 }
 
 .signature-card small,
 .shop-card small {
   display: block;
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--muted);
@@ -399,35 +458,30 @@ a {
 .signature-card.is-active,
 .shop-card:hover,
 .shop-card.is-active {
-  transform: translateY(-4px);
-  border-color: rgba(23, 19, 17, 0.22);
-  box-shadow: 0 18px 40px rgba(42, 29, 22, 0.12);
-}
-
-.signature-number {
-  font-size: 0.72rem;
-  font-weight: 700;
+  transform: translateY(-5px);
+  border-color: rgba(22, 17, 15, 0.2);
+  box-shadow: 0 22px 44px rgba(43, 30, 23, 0.14);
 }
 
 .signature-spotlight,
 .shop-detail {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 1.08fr);
-  gap: 24px;
   padding: 24px;
   border-radius: 34px;
+  background: var(--panel-strong);
 }
 
-.spotlight-copy,
-.shop-detail-copy {
-  display: grid;
-  align-content: center;
-  gap: 16px;
+.signature-spotlight {
+  align-items: stretch;
 }
 
 .signature-spotlight h3,
 .shop-detail h3 {
-  font-size: clamp(2.4rem, 4vw, 4.1rem);
+  font-size: clamp(2.5rem, 4vw, 4.1rem);
+}
+
+.spotlight-note {
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .spotlight-meta {
@@ -438,11 +492,12 @@ a {
 }
 
 .spotlight-meta div,
-.proof-stat {
+.proof-stat,
+.ritual-step {
   padding: 16px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.54);
-  border: 1px solid rgba(23, 19, 17, 0.08);
+  border: 1px solid rgba(22, 17, 15, 0.08);
+  background: rgba(255, 255, 255, 0.56);
 }
 
 .spotlight-meta dt {
@@ -463,9 +518,8 @@ a {
 .spotlight-visual,
 .proof-image,
 .shop-detail-image {
-  overflow: hidden;
+  min-height: 390px;
   border-radius: 28px;
-  min-height: 360px;
 }
 
 .proof-band {
@@ -479,28 +533,22 @@ a {
 
 .proof-index {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   font-size: 0.72rem;
   font-weight: 700;
   color: var(--muted);
 }
 
-.proof-stat h3 {
-  margin: 0 0 12px;
-  font-size: 1.3rem;
-  line-height: 1.08;
-}
-
 .proof-callout {
   display: grid;
   align-content: center;
+  gap: 12px;
   padding: 34px;
   border-radius: 28px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.92));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.94));
 }
 
 .proof-callout-label {
-  margin-bottom: 12px;
   font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -508,7 +556,8 @@ a {
   color: var(--muted);
 }
 
-.credibility-grid {
+.credibility-grid,
+.ritual-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
@@ -530,6 +579,16 @@ a {
   color: var(--muted);
 }
 
+.ritual-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ritual-step {
+  display: grid;
+  gap: 12px;
+  min-height: 220px;
+}
+
 .shop-grid {
   align-items: start;
 }
@@ -544,10 +603,6 @@ a {
   gap: 10px;
   padding: 18px;
   border-radius: 24px;
-}
-
-.shop-detail {
-  background: var(--panel-strong);
 }
 
 .shop-formats {
@@ -565,7 +620,7 @@ a {
 .reveal {
   opacity: 0;
   transform: translateY(28px);
-  transition: opacity 640ms ease, transform 640ms ease;
+  transition: opacity 620ms ease, transform 620ms ease;
 }
 
 .reveal.is-visible {
@@ -582,38 +637,34 @@ a {
   outline-offset: 4px;
 }
 
-@media (max-width: 1100px) {
-  .hero,
+@media (max-width: 1180px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-aside {
+    grid-column: 1 / -1;
+    min-height: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .rhythm,
   .belief-grid,
   .proof-visual,
   .shop-grid,
-  .signature-spotlight,
-  .shop-detail {
+  .signature-spotlight {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    min-height: auto;
-  }
-
-  .hero-copy,
-  .hero-visual {
-    min-height: 620px;
-  }
-
-  .signature-grid {
+  .signature-grid,
+  .ritual-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .proof-band,
-  .credibility-grid {
-    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 760px) {
   .page-shell {
-    padding: 12px 12px 36px;
+    padding: 12px 12px 40px;
   }
 
   .site-header {
@@ -630,70 +681,83 @@ a {
   .site-nav {
     display: none;
     width: 100%;
-    padding-top: 10px;
-    border-top: 1px solid var(--line);
     flex-direction: column;
     gap: 14px;
+    padding-top: 10px;
+    border-top: 1px solid var(--line);
   }
 
   .site-header.is-open .site-nav {
     display: flex;
   }
 
-  .hero-copy,
-  .hero-visual {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-intro,
+  .hero-stage {
     min-height: auto;
   }
 
-  .hero-copy {
+  .hero-intro {
     padding: 24px;
     border-radius: 28px;
   }
 
-  .hero-copy h1 {
-    font-size: clamp(3.5rem, 18vw, 5.4rem);
+  .hero-intro h1 {
+    font-size: clamp(3.6rem, 18vw, 5.6rem);
   }
 
-  .hero-visual {
+  .hero-stage {
+    min-height: 560px;
     padding: 16px;
-    min-height: 520px;
     border-radius: 28px;
   }
 
-  .hero-frame-primary {
-    inset: 16px 16px 158px 16px;
+  .hero-poster-main {
+    inset: 16px 16px 160px 16px;
   }
 
-  .hero-frame-secondary {
+  .hero-poster-top {
     right: 16px;
+    top: auto;
     bottom: 16px;
     width: 42vw;
-    height: 32vw;
-    min-width: 140px;
-    min-height: 128px;
+    height: 34vw;
+    min-width: 134px;
+    min-height: 116px;
   }
 
-  .hero-frame-detail {
-    top: auto;
+  .hero-poster-bottom {
     left: 16px;
+    right: auto;
     bottom: 16px;
-    width: 32vw;
-    height: 32vw;
-    min-width: 112px;
-    min-height: 112px;
+    width: 30vw;
+    height: 30vw;
+    min-width: 100px;
+    min-height: 100px;
   }
 
-  .hero-note {
-    left: 16px;
+  .hero-caption {
+    left: 50%;
     right: 16px;
-    bottom: 132px;
-    max-width: none;
+    width: auto;
+    bottom: 16px;
+  }
+
+  .hero-aside {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 14px;
   }
 
   .belief,
+  .rhythm,
   .signatures,
   .proof,
   .credibility,
+  .ritual,
   .shop,
   .closing {
     padding-top: 72px;
@@ -701,19 +765,32 @@ a {
 
   .belief h2,
   .section-heading h2,
+  .rhythm h2,
   .closing h2,
   .signature-spotlight h3,
   .shop-detail h3 {
     font-size: clamp(2.3rem, 12vw, 3.8rem);
   }
 
-  .signature-grid {
+  .rhythm-strip,
+  .signature-grid,
+  .proof-band,
+  .credibility-grid,
+  .ritual-grid {
     grid-template-columns: 1fr;
+  }
+
+  .rhythm-card:nth-child(2) {
+    transform: none;
+  }
+
+  .rhythm-card {
+    min-height: 240px;
   }
 
   .signature-card {
     min-height: 0;
-    gap: 22px;
+    gap: 20px;
   }
 
   .signature-spotlight,
@@ -722,14 +799,14 @@ a {
     border-radius: 26px;
   }
 
+  .spotlight-meta {
+    grid-template-columns: 1fr;
+  }
+
   .spotlight-visual,
   .proof-image,
   .shop-detail-image {
-    min-height: 280px;
-  }
-
-  .spotlight-meta {
-    grid-template-columns: 1fr;
+    min-height: 300px;
   }
 
   .proof-band {

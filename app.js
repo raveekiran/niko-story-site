@@ -9,6 +9,7 @@ const siteNavLinks = document.querySelectorAll(".site-nav a");
 
 const signatureTitle = document.querySelector("#signature-title");
 const signatureCopy = document.querySelector("#signature-copy");
+const signatureNote = document.querySelector("#signature-note");
 const signatureColor = document.querySelector("#signature-color");
 const signatureFinish = document.querySelector("#signature-finish");
 const signatureNumber = document.querySelector("#signature-number");
@@ -37,6 +38,7 @@ revealItems.forEach((item) => revealObserver.observe(item));
 function activateSignature(card) {
   signatureCards.forEach((item) => item.classList.toggle("is-active", item === card));
   signatureTitle.textContent = card.dataset.title;
+  signatureNote.textContent = card.dataset.note;
   signatureCopy.textContent = card.dataset.copy;
   signatureColor.textContent = card.dataset.color;
   signatureFinish.textContent = card.dataset.finish;
